@@ -11,7 +11,7 @@ const countryInfoEl = document.querySelector('.country-info');
 inputEl.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(event) {
-    const searchQuery = event.target.value;
+    const searchQuery = event.target.value.trim();
     countryListEl.innerHTML = '';
     countryInfoEl.innerHTML = '';
     if (searchQuery) {
